@@ -14,7 +14,6 @@ build-type:     Simple
 library
   exposed-modules:
       XYZ.Lib
-      XYZ.Two.Lib
   other-modules:
       Paths_xyz
   hs-source-dirs:
@@ -45,7 +44,6 @@ test-suite test
   main-is: Main.hs
   other-modules:
       XYZ.Good
-      XYZ.Two.Bad
       Paths_xyz
   hs-source-dirs:
       test
