@@ -1,0 +1,58 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.7.
+--
+-- see: https://github.com/sol/hpack
+
+name:           xyz
+version:        0
+author:         Jay
+maintainer:     jay.mccarthy@gmail.com
+license:        Apache-2.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      XYZ.Lib
+      XYZ.Two.Lib
+  other-modules:
+      Paths_xyz
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , tasty
+    , tasty-discover
+    , tasty-hunit
+  default-language: Haskell2010
+
+executable xyzc
+  main-is: Main.hs
+  other-modules:
+      Paths_xyz
+  hs-source-dirs:
+      app
+  build-depends:
+      base >=4.7 && <5
+    , tasty
+    , tasty-discover
+    , tasty-hunit
+    , xyz
+  default-language: Haskell2010
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      XYZ.Good
+      XYZ.Two.Bad
+      Paths_xyz
+  hs-source-dirs:
+      test
+  build-depends:
+      base >=4.7 && <5
+    , tasty
+    , tasty-discover
+    , tasty-hunit
+    , xyz
+  default-language: Haskell2010

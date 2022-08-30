@@ -1,0 +1,28 @@
+name: xyz
+version:             0
+license:             Apache-2.0
+author:              "Jay"
+maintainer:          "jay.mccarthy@gmail.com"
+
+dependencies:
+- base >= 4.7 && < 5
+- tasty
+- tasty-discover
+- tasty-hunit
+
+library:
+  source-dirs: src
+
+tests:
+  test:
+    main: Main.hs
+    source-dirs: test
+    dependencies:
+    - xyz
+
+executables:
+  xyzc:
+    main: Main.hs
+    source-dirs: app
+    dependencies:
+    - xyz
